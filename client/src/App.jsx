@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AppBar, Typography, Avatar, Toolbar, Drawer, CssBaseline, Divider, Paper, FormControl, InputLabel, MenuItem, Box, Select } from '@mui/material';
 import MCQ from './components/MCQ'
 import ImageDescription from "./components/ImageDescription";
+import JumbledSentences from "./components/JumbledSentences";
 
 const App = () => {
   const [part, setPart] = useState('MCQ');
@@ -14,8 +15,8 @@ const App = () => {
     switch (part) {
       case "MCQ":
         return <MCQ />;
-      case "JUMBLED WORDS":
-        return <JumbledWords />;
+      case "JUMBLED SENTENCES":
+        return <JumbledSentences />;
       case "IMAGE DESCRIPTION":
         return <ImageDescription />;
       default:
@@ -74,7 +75,7 @@ const App = () => {
               onChange={handleChange}
             >
               <MenuItem value={"MCQ"}>MCQ</MenuItem>
-              <MenuItem value={"JUMBLED WORDS"}>JUMBLED WORDS</MenuItem>
+              <MenuItem value={"JUMBLED SENTENCES"}>JUMBLED WORDS</MenuItem>
               <MenuItem value={"IMAGE DESCRIPTION"}>IMAGE DESCRIPTION</MenuItem>
             </Select>
           </FormControl>

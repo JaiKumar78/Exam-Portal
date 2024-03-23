@@ -35,7 +35,7 @@ const ImageDescription = () => {
         <Grid container spacing={2}>
             <Grid item xs={8} sx={{ position: "relative" }}>
                 <Item sx={{ height: 500 }}>
-                    <img src={ID[0].src} alt="" width={400}/>
+                    <img src={ID[0].src} alt="" width={400} style={{ marginBottom: 10 }}/>
                     <TextField
                         onChange={handleChange}
                         sx={{ fontSize: 50 }}
@@ -50,14 +50,14 @@ const ImageDescription = () => {
                     <Button
                         startIcon={<KeyboardArrowLeftIcon />}
                         variant="contained"
-                        sx={{ position: 'absolute', bottom: 25, left: 25 }}
+                        sx={{ position: 'absolute', bottom: 20, left: 25 }}
                     >
                         Previous
                     </Button>
                     <Button
                         endIcon={<KeyboardArrowRightIcon />}
                         variant="contained"
-                        sx={{ position: 'absolute', bottom: 25, right: 25 }}
+                        sx={{ position: 'absolute', bottom: 20, right: 25 }}
                         onClick={handleSubmit}
                     >
                         Next
